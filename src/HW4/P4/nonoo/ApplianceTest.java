@@ -8,21 +8,9 @@ public class ApplianceTest {
             new Microwave(800)
         };
         for (Appliance appliance : appliances) {
-            switch (appliance) {
-                case WashingMachine wm -> {
-                    System.out.println(wm.getClass().getSimpleName());
-                    wm.performFunction();
-                }
-                case Refrigerator fridge -> {
-                    System.out.println(fridge.getClass().getSimpleName());
-                    fridge.performFunction();
-                }
-                case Microwave mw -> {
-                    System.out.println(mw.getClass().getSimpleName());
-                    mw.performFunction();
-                }
-                case null, default -> System.out.println("Unknown type");
-            }
+            if (appliance==null) continue;
+            System.out.println(appliance.getClass().getSimpleName());
+            appliance.performFunction();
         }
     }
 }

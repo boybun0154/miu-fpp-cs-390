@@ -13,7 +13,7 @@ public class EmployeeTest {
                 new BasePlusCommisionEmployee("Pikachu","Elik","456789",60,0.1,65),
                 new SalariedEmployee("Clark","Ken","567890",200),
         };
-        System.out.println(Arrays.toString(findSalaryList(employees,300)));
+        System.out.println(Arrays.toString(findSalaryList(employees,250)));
     }
 
     public static Employee[] findSalaryList (Employee[] col, double salary) {
