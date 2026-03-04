@@ -13,18 +13,17 @@ public class EmployeeTest {
                 new BasePlusCommisionEmployee("Pikachu","Elik","456789",60,0.1,65),
                 new SalariedEmployee("Clark","Ken","567890",200),
         };
-        System.out.println(Arrays.toString(findSalaryList(employees,250)));
+        System.out.println(Arrays.toString(findSalaryList(employees,110)));
     }
 
     public static Employee[] findSalaryList (Employee[] col, double salary) {
         if(col==null||col.length==0) return new Employee[0];
-        List<Employee> list = new ArrayList<Employee>();
+        Employee[] result = new Employee[col.length];
+        int index=0;
         for (Employee employee : col) {
-            if (employee==null) continue;
-            if (employee.getPayment() < salary) {
-                list.add(employee);
-            }
+            if (employee == null) continue;
+            if (employee.getPayment() < salary) result[index++] = employee;
         }
-        return list.toArray(new Employee[list.size()]);
+        return Arrays.copyOf(result, index);
     }
 }
