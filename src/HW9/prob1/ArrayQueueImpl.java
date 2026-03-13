@@ -17,7 +17,8 @@ public class ArrayQueueImpl {
     }
 
     public Integer peek() {
-        if (!isEmpty() && arr[front]!=null) return arr[front];
+            //why arr[front]!=null is checked if you are going to return null anyways.
+         if (!isEmpty()) return arr[front];
         else return null;
     //implement
     }
