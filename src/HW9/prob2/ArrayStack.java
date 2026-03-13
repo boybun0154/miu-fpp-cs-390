@@ -1,6 +1,6 @@
 package HW9.prob2;
 
-public class ArrayStack {
+public class ArrayStack { // I think it should be LinkedListStack, as we use LinkedList instead of Array! 
     /* Assumption: the stack will never become full */
     private static final int LEN = 500;
     private int top = -1;
